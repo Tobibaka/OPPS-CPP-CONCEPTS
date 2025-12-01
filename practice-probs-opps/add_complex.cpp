@@ -6,9 +6,9 @@ private:
     float real;
     float imag;
 public:
-    Complex(float r = 0, float i = 0) : real(r), imag(i) {}
+    Complex(float r=0 , float i=1 ) : real(r), imag(i) {}
     float getReal()  { return real; }
-    float getImag()  { return imag; }
+    float getImag()  { return imag; }   
     Complex operator+( Complex other){
         Complex result;
         result.real = real + other.real;
@@ -34,6 +34,8 @@ Complex addComplex(Complex c1, Complex c2) {
 }
 int main() {
     //input from user 
+    Complex c;
+    cout<< c.getReal()<< c.getImag();
     float r1, i1, r2, i2;
     cout << "Enter real and imaginary parts of first complex number: ";
     cin >> r1 >> i1;
@@ -45,7 +47,7 @@ int main() {
     Complex c4 = c1 + c2; // Using overloaded + operator
     if ( i1+i2 >= 0)
         cout << "Sum of Complex Numbers (using friend function): " << c3.getReal() << " + " << c3.getImag() << "i" << endl;
-    else
+     else
         cout << "Sum of Complex Numbers (using friend function): " << c3.getReal() << " - " << -c3.getImag() << "i" << endl;
     if ( i1+i2 >= 0)
         cout << "Sum of Complex Numbers (using operator+): "  << c4.getReal() << " + " << c4.getImag() << "i" << endl;
