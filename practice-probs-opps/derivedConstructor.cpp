@@ -31,6 +31,7 @@ class Derived2 : public Derived1 {
 private:
     int gamma;
 public:
+//initializing derived2 constructor with derived1 constructor with base constructor with comments
     Derived2(int a, int b, int g) : Derived1(a, b), gamma(g) {
         cout << "Derived2 constructor called with gamma = " << gamma << endl;
     }
@@ -53,7 +54,7 @@ int main() {
     cout << "Enter value for gamma: ";
     cin >> g;
     
-    cout << "\nCreating Derived2 object:\n";
+    cout << "\nCreating Derived2 object:\n";//initializing derived2 object
     Derived2 obj(a, b, g);
     
     obj.displayAll();

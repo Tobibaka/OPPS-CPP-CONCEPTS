@@ -5,7 +5,10 @@ class ArrayException {
 private:
     string message;
 public:
-    ArrayException(string msg) : message(msg) {}
+    ArrayException(string msg)
+    {
+        message=msg; 
+    }
     
     string what() {
         return message;
@@ -24,6 +27,7 @@ public:
     
     ~SafeArray() {
         delete[] arr;
+        cout << "Memory freed." << endl;
     }
     
     void setValue(int index, int value) {
@@ -70,7 +74,7 @@ int main() {
         cout << "\nTrying to access index " << n << " (out of bounds)..." << endl;
         cout << arr.getValue(n) << endl;
     }
-    catch (ArrayException& e) {
+    catch (ArrayException e) {
         cout << "Exception caught: " << e.what() << endl;
     }
     
