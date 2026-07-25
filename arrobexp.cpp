@@ -24,7 +24,7 @@ public:
             throw out_of_range("Array index out of bounds");
         }
         return arr[index];
-    }
+    } 
 };
 int main() {
     Array arr(5);
