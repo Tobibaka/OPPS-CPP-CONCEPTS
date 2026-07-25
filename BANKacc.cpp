@@ -66,7 +66,7 @@ int main() {
         cin >> t;
         cout << "Initial Balance: ";
         cin >> bal;
-
+ 
         customers[i].assignValues(name, acc, t, bal);
     }
 
