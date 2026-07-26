@@ -32,12 +32,6 @@ public:
                 break;
             }
         }
-
-        if (index == -1) {
-            cout << "Item not found!\n";
-            return;
-        }
-
         // Shift items to remove the deleted one
         for (int i = index; i < count - 1; i++) {
             codes[i] = codes[i + 1];
