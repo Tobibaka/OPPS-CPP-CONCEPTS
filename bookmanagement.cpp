@@ -8,7 +8,7 @@ private:
     char* publisher;
     float price;
     int stock;
-
+ 
 public:
     // Constructor - using new operator to allocate memory
     books() {
@@ -20,8 +20,8 @@ public:
         publisher[0] = 0;
         price = 0.0;
         stock = 0;
-    }
-
+    } 
+     
     // Destructor - to free allocated memory
     ~books() {
         delete[] author;
@@ -55,13 +55,12 @@ public:
         }
         return (str1[i] == 0 && str2[i] == 0);
     }
-
-    // Function to search book by title and author
+// Function to search book by title and author
     bool search(char* searchTitle, char* searchAuthor) {
         if (compareStrings(title, searchTitle) && compareStrings(author, searchAuthor)) {
             return true;
-        }
-        return false;
+        } 
+        return false; 
     }
 
     // Function to display book details
@@ -117,8 +116,7 @@ int main() {
             case 1: {
                 if (totalBooks < maxBooks) {
                     cout << "\n--- Add Book " << (totalBooks + 1) << " ---";
-                    inventory[totalBooks].getDetails();
-                    totalBooks++;
+                    inventory[totalBooks++].getDetails();
                     cout << "\nBook added successfully!\n";
                 } else {
                     cout << "\nInventory is full!\n";
@@ -150,7 +148,7 @@ int main() {
                         inventory[i].purchaseBook();
                         break;
                     }
-                }
+                }   
 
                 if (!found) {
                     cout << "\nBook is not available in the inventory.\n";
