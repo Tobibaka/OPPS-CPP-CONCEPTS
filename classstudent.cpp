@@ -19,10 +19,12 @@ void put_data(student s) {
     }
 
 int main() {
-    student s;
+    student s,d;
 
     s.get_data(); 
     put_data(s);
+    d.get_data();
+    put_data(d);
 
     return 0;
 }
